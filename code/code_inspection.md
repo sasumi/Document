@@ -67,6 +67,8 @@ IDE提示内容包含且不止于以下场景：
 5. 精简变量、前缀
 6. 混淆字符、密码等特定需要场景。
 
+案例：
+
 ```php
 "descrb",
 @return bool ture 有参与  false 未参与
@@ -221,6 +223,8 @@ class TestController extends Controller
 **该编码方式极容易引发变量被篡改。**
 原因可参考：https://stackoverflow.com/questions/3307409/php-pass-by-reference-in-foreach
 
+案例：
+
 ```php
 $a = array ('zero','one','two', 'three');
 
@@ -236,12 +240,16 @@ foreach ($a as $v) {
 ### 5. 禁止使用 *number_format* 方法进行数值运算
 ``number_format()`` 仅用于**数值格式化（如千分位表现）**，常见数值取位逻辑基本会涉及进位问题，因此推荐使用 ``round($val, $precision = 0, $mode = PHP_ROUND_HALF_UP)``函数、或其他数值精度处理函数。
 
+案例：
+
 ```php
 $number = number_format($orgValue / 100, 2);
 $number = str_replace(",", "", $number);
 ```
 
 ### 6. 禁止使用空置try···catch语句，消耗代码性能，浪费代码行数
+
+案例：
 
 ``` php
 public function __construct($activityType, $oprationApi = [], $openRedis = false){
@@ -258,7 +266,7 @@ public function __construct($activityType, $oprationApi = [], $openRedis = false
 PHP针对为定义常量自动转换成字符变量，代码可以正常运行。但为保证代码正确性，
 应当禁止该类编码方式。
 
-例：
+案例：
 
 ```php
 //场景1：常量当做字符串使用
@@ -359,6 +367,8 @@ if (!empty($authority_list)) {
 ### 13. 不推荐出现变量可能未定义情况
 
 该情况可能存在逻辑上缺失，在特定条件分支中引发代码BUG。
+
+案例：
 
 ![image-20200507001040811](code_inspection.assets/image-20200507001040811.png)
 
