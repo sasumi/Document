@@ -1,4 +1,4 @@
-# PHP 编码审查标准
+# PHP 编码审查
 
 [TOC]
 
@@ -48,13 +48,13 @@ IDE提示内容包含且不止于以下场景：
 
 案例：
 
-![image-20200506233712604](code_inspection.assets/image-20200506233712604.png)
+![image-20200506233712604](assets/image-20200506233712604.png)
 
-![image-20200507000743495](code_inspection.assets/image-20200507000743495.png)
+![image-20200507000743495](assets/image-20200507000743495.png)
 
-![image-20200506235719945](code_inspection.assets/image-20200506235719945.png)
+![image-20200506235719945](assets/image-20200506235719945.png)
 
-![image-20200506235800549](code_inspection.assets/image-20200506235800549.png)
+![image-20200506235800549](assets/image-20200506235800549.png)
 
 ### 2. 禁止出现单词拼写错误
 
@@ -274,9 +274,9 @@ $a = $row[name]; //执行效果等同于：$a = $row['name'];
 $_ids=$request->get(item_id);
 ```
 
-![image-20200506231742538](code_inspection.assets/image-20200506231742538.png)
+![image-20200506231742538](assets/image-20200506231742538.png)
 
-![image-20200506231929335](code_inspection.assets/image-20200506231929335.png)
+![image-20200506231929335](assets/image-20200506231929335.png)
 
 ### 8. 禁止代码中出现：未定义函数、未定义类名
 
@@ -294,15 +294,15 @@ View模板文件中，可列为例外处理。
 
 案例：
 
-![image-20200506225327534](code_inspection.assets/image-20200506225327534.png)
+![image-20200506225327534](assets/image-20200506225327534.png)
 
-![image-20200506232047120](code_inspection.assets/image-20200506232047120.png)
+![image-20200506232047120](assets/image-20200506232047120.png)
 
-![image-20200506225542398](code_inspection.assets/image-20200506225542398.png)
+![image-20200506225542398](assets/image-20200506225542398.png)
 
-![image-20200506224020533](code_inspection.assets/image-20200506224020533.png)
+![image-20200506224020533](assets/image-20200506224020533.png)
 
-![image-20200506230500914](code_inspection.assets/image-20200506230500914.png)
+![image-20200506230500914](assets/image-20200506230500914.png)
 
 <u>建议：如变量方法为魔术方法、或全局变量，建议使用PHPDoc注释在文件中重新声明。</u>
 
@@ -312,11 +312,11 @@ View模板文件中，可列为例外处理。
 
 案例：
 
-![image-20200506234333933](code_inspection.assets/image-20200506234333933.png)
+![image-20200506234333933](assets/image-20200506234333933.png)
 
-![image-20200506234359813](code_inspection.assets/image-20200506234359813.png)
+![image-20200506234359813](assets/image-20200506234359813.png)
 
-![image-20200506235502385](code_inspection.assets/image-20200506235502385.png)
+![image-20200506235502385](assets/image-20200506235502385.png)
 
 
 
@@ -332,11 +332,11 @@ if (!empty($authority_list)) {
 拼接URL时，不考虑原字符串是否包含?或者&字符，可能会因为路由方式的改变，导致拼接逻辑错误。
 案例：
 
-![image-20200507003521450](code_inspection.assets/image-20200507003521450.png)
+![image-20200507003521450](assets/image-20200507003521450.png)
 
-![image-20200507003613324](code_inspection.assets/image-20200507003613324.png)
+![image-20200507003613324](assets/image-20200507003613324.png)
 
-![image-20200507003639428](code_inspection.assets/image-20200507003639428.png)
+![image-20200507003639428](assets/image-20200507003639428.png)
 
 ### 11. 禁止在代码公开访问目录遗留有数据泄露风险的文件
 
@@ -356,11 +356,11 @@ if (!empty($authority_list)) {
 建议：凡是涉及该项的代码，应当在团队的努力下，收敛这种代码的出现。有能力团队可按照实际情况选择优先级进行推行。
 案例：
 
-![image-20200507002958171](code_inspection.assets/image-20200507002958171.png)
+![image-20200507002958171](assets/image-20200507002958171.png)
 
-![image-20200507003007731](code_inspection.assets/image-20200507003007731.png)
+![image-20200507003007731](assets/image-20200507003007731.png)
 
-![image-20200507003014262](code_inspection.assets/image-20200507003014262.png)
+![image-20200507003014262](assets/image-20200507003014262.png)
 
 
 
@@ -370,9 +370,9 @@ if (!empty($authority_list)) {
 
 案例：
 
-![image-20200507001040811](code_inspection.assets/image-20200507001040811.png)
+![image-20200507001040811](assets/image-20200507001040811.png)
 
-![image-20200507001311773](code_inspection.assets/image-20200507001311773.png)
+![image-20200507001311773](assets/image-20200507001311773.png)
 
 
 
@@ -384,7 +384,7 @@ if (!empty($authority_list)) {
 
 案例：
 
-![image-20200507001206902](code_inspection.assets/image-20200507001206902.png)
+![image-20200507001206902](assets/image-20200507001206902.png)
 
 ### 15. 不推荐声明未使用变量
 
@@ -392,17 +392,17 @@ if (!empty($authority_list)) {
 
 案例：
 
-![image-20200507002257150](code_inspection.assets/image-20200507002257150.png)
+![image-20200507002257150](assets/image-20200507002257150.png)
 
-![image-20200507001724840](code_inspection.assets/image-20200507001724840.png)
+![image-20200507001724840](assets/image-20200507001724840.png)
 
 ### 16. 不推荐使用与方法、函数、接口声明不一致变量类型、变量数量
 
 案例：
 
-![image-20200507001952808](code_inspection.assets/image-20200507001952808.png)
+![image-20200507001952808](assets/image-20200507001952808.png)
 
-![image-20200507002129233](code_inspection.assets/image-20200507002129233.png)
+![image-20200507002129233](assets/image-20200507002129233.png)
 
 ### 17. 不推荐使用 *strtotime("$m month")* 使用月份数来推导时间
 
@@ -410,4 +410,4 @@ if (!empty($authority_list)) {
 
 ### 18. 推荐代码检查结果为：🍀绿色通过
 
-![image-20200507005019107](code_inspection.assets/image-20200507005019107.png)
+![image-20200507005019107](assets/image-20200507005019107.png)
